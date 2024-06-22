@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLDas.Web", "MLDas.Web\MLDas.Web.csproj", "{45ED8F9A-C7C3-4824-822F-643884770AA1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLDAS.Lib.Platform", "MLDAS.Lib.Platform\MLDAS.Lib.Platform.csproj", "{DEDE237B-53B5-48E7-BECB-B39D5C414141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLDAS.Lib.Module.CyberSecurity", "MLDAS.Lib.Module.CyberSecurity\MLDAS.Lib.Module.CyberSecurity.csproj", "{D07D65E8-B962-4419-9644-521289F7A122}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{45ED8F9A-C7C3-4824-822F-643884770AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45ED8F9A-C7C3-4824-822F-643884770AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45ED8F9A-C7C3-4824-822F-643884770AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDE237B-53B5-48E7-BECB-B39D5C414141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDE237B-53B5-48E7-BECB-B39D5C414141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDE237B-53B5-48E7-BECB-B39D5C414141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDE237B-53B5-48E7-BECB-B39D5C414141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07D65E8-B962-4419-9644-521289F7A122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07D65E8-B962-4419-9644-521289F7A122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07D65E8-B962-4419-9644-521289F7A122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07D65E8-B962-4419-9644-521289F7A122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
