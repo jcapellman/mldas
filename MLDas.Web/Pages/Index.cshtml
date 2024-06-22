@@ -1,9 +1,4 @@
 ﻿@page
 @using Westwind.AspNetCore.Markdown;
 
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div>@Markdown.ParseHtmlStringFromFile("README.md")</div>
+<div>@Markdown.ParseHtmlStringFromUrl("https://github.com/jcapellman/mldas/blob/main/README.md")</div>
