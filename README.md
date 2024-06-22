@@ -14,12 +14,14 @@ Below is the initial cloud architecture when an endpoint client sends or receive
 ![Alt text](Assets/Excalidraw/Endpoint_Cloud_Architecture.png?raw=true "Endpoint and Cloud Architecture")
 
 ## Endpoint Architecture
-<TBD>
+To be flushed out...
 
 ## Cloud Module Architecture
-<TBD>
+To be flushed out...
 
 ## Requirements
+### Server
+As noted in the earlier section, initial support will only be officially on Google Cloud. Abstractions will be provided, but other implementations to AWS or Azure for example will not be performed.
 
 ### Endpoint
 The initial release of the Endpoint will support the following platforms:
