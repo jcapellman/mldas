@@ -14,8 +14,11 @@
     <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.17.0" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <Target Name="PostBuild" Condition=" '$(OS)' == 'Windows_NT' " AfterTargets="PostBuildEvent">
     <Exec Command="xcopy &quot;..\README.md&quot; &quot;$(ProjectDir)wwwroot\&quot; /Y" />
   </Target>
 
+	<Target Name="PostBuild" Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' " AfterTargets="PostBuildEvent">
+		<Exec Command="cp &quot;..\README.md&quot; &quot;$(ProjectDir)wwwroot\&quot;" />
+	</Target>
 </Project>
