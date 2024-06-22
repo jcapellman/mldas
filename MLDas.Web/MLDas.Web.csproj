@@ -19,6 +19,6 @@
   </Target>
 
 	<Target Name="PostBuild" Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' " AfterTargets="PostBuildEvent">
-		<Exec Command="cp &quot;..\README.md&quot; &quot;$(ProjectDir)wwwroot\&quot;" />
+		<Exec Command="cp &quot;../README.md&quot; &quot;$(ProjectDir)wwwroot\&quot;" />
 	</Target>
 </Project>
