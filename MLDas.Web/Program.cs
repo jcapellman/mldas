@@ -1,3 +1,5 @@
+using Westwind.AspNetCore.Markdown;
+
 namespace MLDas.Web
 {
     public class Program
@@ -8,6 +10,7 @@ namespace MLDas.Web
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddMarkdown();
             builder.Services.AddControllers();
 
             var app = builder.Build();
@@ -19,6 +22,7 @@ namespace MLDas.Web
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseMarkdown();
 
             app.UseRouting();
             
