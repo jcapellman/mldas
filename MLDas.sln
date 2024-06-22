@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLDas.Web", "MLDas.Web\MLDa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLDAS.Lib.Platform", "MLDAS.Lib.Platform\MLDAS.Lib.Platform.csproj", "{DEDE237B-53B5-48E7-BECB-B39D5C414141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLDAS.Lib.Module.CyberSecurity", "MLDAS.Lib.Module.CyberSecurity\MLDAS.Lib.Module.CyberSecurity.csproj", "{D07D65E8-B962-4419-9644-521289F7A122}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLDAS.Lib.Category.CyberSecurity", "MLDAS.Lib.Module.CyberSecurity\MLDAS.Lib.Category.CyberSecurity.csproj", "{D07D65E8-B962-4419-9644-521289F7A122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
