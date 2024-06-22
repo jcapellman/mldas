@@ -1,4 +1,4 @@
-![Alt text](MLDas.Web/wwwroot/images/Logo.png?raw=true "Title")
+![Alt text](https://github.com/jcapellman/mldas/blob/main/MLDas.Web/wwwroot/images/Logo.png?raw=true "Title")
 
 ## What is ML DAS?
 It is a Machine Learning Data Analysis Service that targets a cybersecurity angle on file analysis but could be used for other use cases.
@@ -11,7 +11,7 @@ The initial version will only support a Google Cloud deployment, but it is being
 
 ## Endpoint <-> Cloud Architecture
 Below is the initial cloud architecture when an endpoint client sends or receives data:
-![Alt text](Assets/Excalidraw/Endpoint_Cloud_Architecture.png?raw=true "Endpoint and Cloud Architecture")
+![Alt text](https://github.com/jcapellman/mldas/blob/main/Assets/Excalidraw/Endpoint_Cloud_Architecture.png?raw=true "Endpoint and Cloud Architecture")
 
 ## Endpoint Architecture
 To be flushed out...
