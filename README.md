@@ -1,13 +1,13 @@
 ![Alt text](MLDas.Web/wwwroot/images/Logo.png?raw=true "Title")
 
 ## What is ML DAS?
-It is a Machine Learning Data Analysis Service that targets a cybersecurity angle on file analysis but could be used for a variety of other use cases.
+It is a Machine Learning Data Analysis Service that targets a cybersecurity angle on file analysis but could be used for other use cases.
 
 ## Technology Stack
-I am always a proponent of using the best tool for the job, so this project utilizes both C# and Rust.  C# for all of the Web Frontends, Cloud Functions, and REST Services. Meanwhile, Rust is used for the endpoint.  Utilizing both of these languages affords performance and cross-platform compatibility.
+I am always a proponent of using the best tool for the job, so this project utilizes both C# and Rust.  C# is used for all Web Frontends, Cloud Functions, and REST Services, while Rust is used for the Endpoint.  Utilizing both of these languages affords performance and cross-platform compatibility.
 
 ## Architecture
-Initial version is only going to support a Google Cloud deployment, but it is being built modularly and with abstraction layers to support other clouds or for a local edge only deployment.
+The initial version will only support a Google Cloud deployment, but it is being built modularly and with abstraction layers to support other clouds or a local edge-only deployment.
 
 ## Endpoint <-> Cloud Architecture
 Below is the initial cloud architecture when an endpoint client sends or receives data:
@@ -21,7 +21,7 @@ To be flushed out...
 
 ## Requirements
 ### Server
-As noted in the earlier section, initial support will only be officially on Google Cloud. Abstractions will be provided, but other implementations to AWS or Azure for example will not be performed.
+As noted earlier, initial support will only be officially provided on Google Cloud. Abstractions will be provided, but other implementations to AWS or Azure, for example, will not be performed.
 
 ### Endpoint
 The initial release of the Endpoint will support the following platforms:
