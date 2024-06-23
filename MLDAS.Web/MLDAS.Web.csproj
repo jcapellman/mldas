@@ -7,6 +7,8 @@
     <UserSecretsId>186ea606-c23b-4986-a4ec-6f82c25ce333</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+	<ContainerFamily>alpine</ContainerFamily>
+	<EnableSdkContainerSupport>true</EnableSdkContainerSupport>
   </PropertyGroup>
 
   <ItemGroup>
