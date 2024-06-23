@@ -1,4 +1,4 @@
-![Alt text](https://github.com/jcapellman/mldas/blob/main/MLDas.Web/wwwroot/images/Logo.png?raw=true "Title")
+![Alt text](https://github.com/jcapellman/mldas/blob/main/MLDAS.Web/wwwroot/images/Logo.png?raw=true "Title")
 
 ## What is ML DAS?
 It is a Machine Learning Data Analysis Service that targets a cybersecurity angle on file analysis but could be used for other use cases.
