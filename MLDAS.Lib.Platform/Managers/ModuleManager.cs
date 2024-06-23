@@ -23,7 +23,8 @@ namespace MLDAS.Lib.Platform.Managers
             {
                 var assembly = Assembly.LoadFile(potentialModulePath);
 
-                _availableModules.AddRange(assembly.GetTypes().Where(a => a.BaseType?.BaseType == typeof(BaseModule) && !a.IsAbstract).Select(b => (BaseModule)Activator.CreateInstance(b)!));
+                _availableModules.AddRange(assembly.GetTypes().Where(a => a.BaseType?.BaseType == typeof(BaseModule) && !a.IsAbstract).
+                    Select(b => (BaseModule)Activator.CreateInstance(b)!).Where(c => c.DevelopedForAPI == Common.AppConstants.APIVersion));
             }
         }
 
