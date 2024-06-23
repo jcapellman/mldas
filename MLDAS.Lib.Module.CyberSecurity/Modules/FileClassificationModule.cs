@@ -8,6 +8,8 @@ namespace MLDAS.Lib.Category.CyberSecurity.Modules
 
         public override string Description => "Classifies the PE32 file as malware or not";
 
+        public override int Version => 1;
+
         public override void Run()
         {
             // TODO

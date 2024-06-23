@@ -10,6 +10,8 @@ namespace MLDAS.Lib.Platform.Abstractions.Base
 
         public abstract string Description { get; }
 
+        public abstract int Version { get; }
+
         public abstract void Run();
     }
 }
