@@ -1,5 +1,8 @@
 ﻿@page
 
+@model MLDas.Web.Pages.IndexModel
+
+<div class="container">
 <h2>What is ML DAS?</h2>
 Please check out the <a href="https://github.com/jcapellman/mldas/">GitHub Readme</a> for more details.
 
@@ -7,3 +10,14 @@ Please check out the <a href="https://github.com/jcapellman/mldas/">GitHub Readm
 With ML DAS's initial version, an online upload of data will be accepted, processed and then shown in the online database.
 
 Initially, only PE32 files are processed at present under the Cybersecurity Category and File Classification Module.
+
+<h3>Available Modules</h3>
+@foreach (var modules in Model.Modules)
+{
+    <div class="card-header">
+        <h4>@modules.Name</h4>
+        <p class="card-subtitle">@modules.Description</p>
+    </div>
+}
+
+</div>
