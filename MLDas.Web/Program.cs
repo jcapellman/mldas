@@ -1,3 +1,5 @@
+using MLDAS.Lib.Platform.Managers;
+
 namespace MLDas.Web
 {
     public class Program
@@ -8,6 +10,8 @@ namespace MLDas.Web
 
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
+
+            builder.Services.AddSingleton(new ModuleManager());
 
             var app = builder.Build();
 
