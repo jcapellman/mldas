@@ -12,6 +12,8 @@ namespace MLDAS.Lib.Platform.Abstractions.Base
 
         public abstract int Version { get; }
 
+        public abstract int DevelopedForAPI { get; }
+
         public abstract void Run();
     }
 }
