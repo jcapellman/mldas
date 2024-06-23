@@ -4,7 +4,7 @@ using MLDAS.Lib.Platform.Abstractions.Base;
 using MLDAS.Lib.Platform.Enums;
 using MLDAS.Lib.Platform.Managers;
 
-namespace MLDas.Web.Pages
+namespace MLDAS.Web.Pages
 {
     public class IndexModel(ILogger<IndexModel> logger, ModuleManager moduleManager) : PageModel
     {

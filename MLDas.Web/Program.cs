@@ -1,6 +1,6 @@
 using MLDAS.Lib.Platform.Managers;
 
-namespace MLDas.Web
+namespace MLDAS.Web
 {
     public class Program
     {

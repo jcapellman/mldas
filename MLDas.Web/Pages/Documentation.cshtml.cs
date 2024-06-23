@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MLDas.Web.Pages
+namespace MLDAS.Web.Pages
 {
     public class DocumentationModel : PageModel
     {
