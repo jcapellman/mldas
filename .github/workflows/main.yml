@@ -37,4 +37,4 @@ jobs:
         credentials_json: "${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}"
 
     - name: Push Container to GCP
-      run: docker push mldas-web:latest us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
+      run: docker push us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
