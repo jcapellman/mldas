@@ -27,16 +27,11 @@ jobs:
     - name: Build
       run: dotnet publish /home/runner/work/mldas/mldas/MLDAS.Web/MLDAS.Web.csproj -r linux-x64 /t:PublishContainer -c Release 
 
-    - name: Authenticate to Google Cloud
-      id: auth
-      uses: google-github-actions/auth@v2
-      with:
-          workload_identity_provider: projects/${{ secrets.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/the-workload-pool/providers/the-provider
-          service_account: '${{ secrets.GCP_SERVICE_ACCOUNT }}'
     - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
       with:
           registry: gcr.io
           project_id: '${{ secrets.GCP_PROJECT_ID }}'
+          gcloud_service_key: "${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}"
           image_name: mldas-web
           image_tag: latest
             
