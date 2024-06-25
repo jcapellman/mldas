@@ -36,5 +36,11 @@ jobs:
         project_id: '${{ secrets.GCP_PROJECT_ID }}'
         credentials_json: "${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}"
 
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v2'
+
+    - name: 'Configure Docker Auth'
+      run: gcloud auth configure-docker us-central1-docker.pkg.dev
+    
     - name: Push Container to GCP
       run: docker push us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
