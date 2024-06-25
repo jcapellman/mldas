@@ -33,5 +33,5 @@ jobs:
           project_id: '${{ secrets.GCP_PROJECT_ID }}'
           gcloud_service_key: "${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}"
           image_name: mldas-web
-          image_tag: latest
-            
+          image_tag: mldas-web:latest
+          push_only: true
