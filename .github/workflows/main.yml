@@ -1,4 +1,4 @@
-name: .NET Build
+name: Build and Push to GCR
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout the code
       uses: actions/checkout@v4
 
     - name: Setup .NET
@@ -24,16 +24,17 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Build
+    - name: Build Container
       run: dotnet publish /home/runner/work/mldas/mldas/MLDAS.Web/MLDAS.Web.csproj -r linux-x64 /t:PublishContainer -c Release
 
-    - name: Tagem
+    - name: Tag Container
       run: docker tag mldas-web:latest us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
-      
-    - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
+
+    - name: Authenticate to GCP
+      uses: google-github-actions/auth@v2
       with:
-          registry: us-central1-docker.pkg.dev
-          project_id: '${{ secrets.GCP_PROJECT_ID }}'
-          gcloud_service_key: "${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}"
-          image_name: mldas-web
-          push_only: true
+        project_id: '${{ secrets.GCP_PROJECT_ID }}'
+        credentials_json: "${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}"
+
+    - name: Push Container to GCP
+      run: docker push mldas-web:latest us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
