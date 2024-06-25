@@ -28,7 +28,7 @@ jobs:
       run: dotnet publish /home/runner/work/mldas/mldas/MLDAS.Web/MLDAS.Web.csproj -r linux-x64 /t:PublishContainer -c Release
 
     - name: Tagem
-      run: docker tag mldas-web:latest us-central1-docker.pkg.dev//${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
+      run: docker tag mldas-web:latest us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
       
     - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
       with:
