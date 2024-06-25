@@ -25,8 +25,11 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet publish /home/runner/work/mldas/mldas/MLDAS.Web/MLDAS.Web.csproj -r linux-x64 /t:PublishContainer -c Release -p ContainerImageTags='us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas'
+      run: dotnet publish /home/runner/work/mldas/mldas/MLDAS.Web/MLDAS.Web.csproj -r linux-x64 /t:PublishContainer -c Release
 
+    - name: Tagem
+      run: docker tag mldas:latest us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas/mldas
+      
     - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
       with:
           registry: gcr.io
