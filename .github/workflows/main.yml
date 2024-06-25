@@ -25,4 +25,4 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet publish MLDAS.Web/MLDAS.Web.csrpoj -r linux-x64 /t:PublishContainer -c Release 
+      run: dotnet publish /home/runner/work/mldas/mldas/MLDAS.Web/MLDAS.Web.csproj -r linux-x64 /t:PublishContainer -c Release 
