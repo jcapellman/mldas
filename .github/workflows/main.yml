@@ -28,11 +28,11 @@ jobs:
       run: dotnet publish /home/runner/work/mldas/mldas/MLDAS.Web/MLDAS.Web.csproj -r linux-x64 /t:PublishContainer -c Release
 
     - name: Tagem
-      run: docker tag mldas-web:latest us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas-web
+      run: docker tag mldas-web:latest us-central1-docker.pkg.dev//${{secrets.GCP_PROJECT_ID}}/mldas/mldas/mldas-web
       
     - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
       with:
-          registry: gcr.io
+          registry: us-central1-docker.pkg.dev
           project_id: '${{ secrets.GCP_PROJECT_ID }}'
           gcloud_service_key: "${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}"
           image_name: mldas-web
