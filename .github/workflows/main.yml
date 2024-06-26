@@ -39,8 +39,14 @@ jobs:
     - name: 'Set up Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v2'
 
-    - name: 'Configure Docker Auth'
+    - name: Configure Docker Auth
       run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
     - name: Push Container to GCP
       run: docker push us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas-web/mldas-web:latest
+
+    - name: Deploy to CLoud Run
+      uses: 'google-github-actions/deploy-cloudrun@v2'
+      with:
+        service: 'mldas'
+        image: us-central1-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/mldas-web/mldas-web
