@@ -4,3 +4,5 @@ obj/
 Debug/*
 Release/*
 *.user
+mldas_app/target/*
+mldas_app/.idea/*
